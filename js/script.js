@@ -563,33 +563,174 @@ console.log(porsche) */
 // 5 - DOM (Добавление событий).
 // HTML:
 // JS:
-var button = document.querySelector('button')
-var h1 = document.querySelector('h1')
-var input = document.querySelector('input')
+// var button = document.querySelector('button')
+// var h1 = document.querySelector('h1')
+// var input = document.querySelector('input')
 
-// 1-ый способ:
-function buttonHandler() {
-    console.log('checked!')
-    h1.textContent = input.value
-}
+// // 1-ый способ:
+// function buttonHandler() {
+//     console.log('checked!')
+//     h1.textContent = input.value
+// }
 
-button.addEventListener('click', buttonHandler)
+// button.addEventListener('click', buttonHandler)
 
-// 2-ой способ:
+// // 2-ой способ:
 
-h1.addEventListener('mouseenter', function() {
-    console.log('Mouse has entered!')
-    this.style.color = 'green'
-        // h1.classList.add('green')
-})
+// h1.addEventListener('mouseenter', function() {
+//     console.log('Mouse has entered!')
+//     this.style.color = 'green'
+//         // h1.classList.add('green')
+// })
 
-h1.addEventListener('mouseleave', function() {
-    console.log('Mouse has left!')
-    this.style.color = 'red'
+// h1.addEventListener('mouseleave', function() {
+//     console.log('Mouse has left!')
+//     this.style.color = 'red'
 
-    // h1.classList.remove('green')
-    // h1.classList.add('red')
-})
+//     // h1.classList.remove('green')
+//     // h1.classList.add('red')
+// })
 
 
 // console.log(button.textContent)
+
+
+
+
+// 6 - DOM (Всплытие и погружение).
+// CSS:
+// .box1 {
+//   width: 300px;
+//   height: 300px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: red;
+// }
+
+// .box2 {
+//   width: 150px;
+//   height: 150px;
+//   background-color: blue;
+// }
+
+// HTML:
+/* <h1>JS events</h1>
+
+<div class="box1" id="1">
+    <div class="box2" id="2"></div>
+</div> */
+
+// JS:
+// var divs = document.querySelectorAll('div')
+
+// for (var i = 0; i < divs.length; i++) {
+//     divs[i].addEventListener('click', function() {
+//         console.log(this.getAttribute('id'))
+//     })
+// }
+
+
+
+
+// 7 - DOM (Объект события).
+// CSS:
+
+// HTML:
+/* <h1>JS events</h1>
+
+<a id="google" href="https://google.com" target="_blank ">Toggle</a>
+
+
+<div class="box1" id="1">
+    <div class="box2" id="2"></div>
+</div> */
+
+// JS:
+// var divs = document.querySelectorAll('div')
+
+// for (var i = 0; i < divs.length; i++) {
+//     divs[i].addEventListener('click', function(event) {
+//         event.stopPropagation()
+//         console.log(this.getAttribute('id'))
+//     })
+// }
+
+// // var google = document.querySelector('#google')
+
+// // google.addEventListener('click', function(event) {
+// //     event.preventDefault()
+// //     console.log('All are worked!')
+// // })
+
+// // или:
+
+// google.addEventListener('click', handleLinkClick)
+
+// function handleLinkClick(event) {
+//     event.preventDefault()
+//     console.log(`I can't work! I'm stopped by JS.`)
+
+//     // ---
+
+//     var div = divs[0]
+
+//     if (div.style.display === 'none') {
+//         div.style.display = 'flex'
+//     } else {
+//         div.style.display = 'none'
+//     }
+//     // или
+//     div.style.display = div.style.display === 'none' ?
+//         'flex' :
+//         'none'
+
+//     console.log(div.style.display)
+// }
+
+
+
+
+
+// 8 - DOM (Делегирование событий).
+// CSS:
+
+// HTML:
+/* <h1>JS events</h1>
+
+<div id="wrapper">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, ut.</p>
+    <p class="color">COLORLorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, sed.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quasi.</p>
+
+    <ul>
+        <li class="color">53</li>
+        <li>75</li>
+    </ul>
+</div> */
+
+// JS:
+// так не стоит:
+// var p = document.querySelectorAll('p')
+
+// for (var i = 0; i < p.length; i++) {
+//     p[i].addEventListener('click', function(event) {
+//         event.target.style.color = 'blue';
+//     })
+// }
+
+// так нужно сделать:
+// var wrapper = document.getElementById('wrapper')
+
+// wrapper.addEventListener('click', function(event) {
+//     var tagName = event.target.tagName.toLowerCase()
+
+//     if (tagName === 'p') {
+//         event.target.style.color = 'orange'
+//     }
+
+//     if (event.target.classList.contains('color')) {
+//         event.target.style.color = 'red'
+//     }
+// })
