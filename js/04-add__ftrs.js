@@ -174,39 +174,45 @@
 
 // 06 - Addition features (Хранение данных в localStorage).
 // HTML:
+{
+    /* <h1>JS extra</h1>
+        <input type="text">
+        <button>Save</button> */
+}
 
 // JS:
-var button = document.querySelector('button')
+{
+    /* var button = document.querySelector('button')
 
-button.addEventListener('click', function(event) {
-    var value = document.querySelector('input').value
+    button.addEventListener('click', function(event) {
+        var value = document.querySelector('input').value
 
-    var obj = {
-        text: value
-    }
+        var obj = {
+            text: value
+        }
 
-    localStorage.setItem('headerText', JSON.stringify(obj))
-
-
-
-})
-
-document.addEventListener('DOMContentLoaded', function() {
-
-    var obj
-
-    try {
-        obj = JSON.parse(localStorage.getItem('headerText'))
-    } catch (e) {
-        obj = {}
-    }
+        localStorage.setItem('headerText', JSON.stringify(obj))
 
 
-    // тримом удаляем лишние пробелы и если ничего нету вернём h1 как раньше
-    if (obj && obj.text && obj.text.trim()) {
-        document.querySelector('h1').textContent = obj.text
-    }
-})
 
+    })
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        var obj
+
+        try {
+            obj = JSON.parse(localStorage.getItem('headerText'))
+        } catch (e) {
+            obj = {}
+        }
+
+
+        // тримом удаляем лишние пробелы и если ничего нету вернём h1 как раньше
+        if (obj && obj.text && obj.text.trim()) {
+            document.querySelector('h1').textContent = obj.text
+        }
+    }) */
+}
 
 // Повторить вот эти пройденные темы (прочитать документацию.)
