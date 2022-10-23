@@ -305,23 +305,23 @@
 
 
 // Строки.
-var newMessage = `Hello world!`
+// var newMessage = `Hello world!`
 
-console.log(newMessage.length)
+// console.log(newMessage.length)
 
-console.log(newMessage.toUpperCase()) /* большие буквы */
+// console.log(newMessage.toUpperCase()) /* большие буквы */
 
-console.log(newMessage.toLowerCase()) /* маленькие буквы */
+// console.log(newMessage.toLowerCase()) /* маленькие буквы */
 
-console.log(newMessage.charAt(0)) /* какой символ находится здесь */
+// console.log(newMessage.charAt(4)) /* какой символ находится здесь */
 
-console.log(newMessage.indexOf('w')) /* найди мне этот текст или букву */
+// console.log(newMessage.indexOf('w')) /* нечинчи индексга турганини аниклаб бер */
 
-console.log(newMessage.substr(1, 4)) /* шу харфдан унг томондаги 4 тасини олиб кел */
+// console.log(newMessage.substr(0, 4)) /* шу харф билан бирга унг томондан 4 тасини олиб кел */ // --- шундан шунгача(охиргиси кирмайди)
 
-console.log(newMessage.substr(newMessage.indexOf('world'), 3))
+// console.log(newMessage.substr(newMessage.indexOf('world'), 3)) 
 
-console.log(newMessage.substring(1, 3)) /* сам посмотри как работает */
+// console.log(newMessage.substring(1, 3)) /* сам посмотри как работает */
 
 
 
@@ -329,7 +329,7 @@ console.log(newMessage.substring(1, 3)) /* сам посмотри как раб
 // Числа.
 // // От числа к строке:
 // var fortyTwo = 42
-// var delta = 8 / 3 /* 2.666666666 */
+// var delta = 8 / 3 // = 2.666666666 
 
 // console.log(fortyTwo.toString())
 // console.log(delta.toFixed(2))
@@ -420,8 +420,8 @@ console.log(porsche) */
 // Циклы.
 // var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-// // numbers.push('Not a number')
-// // numbers.push('New line')
+// numbers.push('Not a number')
+// numbers.push('New line')
 
 // console.log('Четные числа:')
 //     // i++ => i = 1; 1 < 5
@@ -432,7 +432,7 @@ console.log(porsche) */
 // }
 
 // console.log('Нечетные числа:')
-// for (var i = 0; i <a numbers.length; i++) {
+// for (var i = 0; i < numbers.length; i++) {
 //     if ((numbers[i]) % 2 === 0) {
 //         continue
 //     }
